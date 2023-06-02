@@ -1,60 +1,70 @@
-Yield Aggregator
+# Yield Aggregator
+
 Yield Aggregator is a Solidity smart contract that allows users to deposit their funds into different yield-generating protocols, such as Compound Finance and Aave, to maximize their returns. The contract automatically rebalances the funds between the protocols based on the provided annual percentage yield (APY) parameters.
 
-Dependencies
+## Dependencies
+
 The project has the following dependencies:
 
-OpenZeppelin Contracts library: Provides essential smart contract functionality and secure coding patterns.
-WrappedETH (WETH): An ERC20 token representing wrapped Ether (ETH).
-CompoundETH: The contract interface for the Compound Finance protocol.
-AaveLendingPool: The contract interface for the Aave lending pool.
-Installation
+- OpenZeppelin Contracts library: Provides essential smart contract functionality and secure coding patterns.
+- WrappedETH (WETH): An ERC20 token representing wrapped Ether (ETH).
+- CompoundETH: The contract interface for the Compound Finance protocol.
+- AaveLendingPool: The contract interface for the Aave lending pool.
+
+## Installation
+
 To install the dependencies, follow these steps:
 
-Install the OpenZeppelin Contracts library:
+1. Install the OpenZeppelin Contracts library:
 
-bash
-Copy code
 npm install @openzeppelin/contracts
-Configure the WrappedETH, CompoundETH, and AaveLendingPool contracts:
 
-Obtain the addresses of the contracts for WrappedETH, CompoundETH, and AaveLendingPool.
-Update the respective interface contracts in the Solidity code with the correct addresses and functions.
-Usage
+
+2. Configure the WrappedETH, CompoundETH, and AaveLendingPool contracts:
+- Obtain the addresses of the contracts for WrappedETH, CompoundETH, and AaveLendingPool.
+- Update the respective interface contracts in the Solidity code with the correct addresses and functions.
+
+## Usage
+
 To use the Yield Aggregator contract:
 
-Deploy the contract:
+1. Deploy the contract:
+- Deploy the contract on the Ethereum network using a compatible development framework like Truffle or Hardhat.
+- Provide the addresses of the WrappedETH, CompoundETH, and AaveLendingPool contracts as constructor arguments.
 
-Deploy the contract on the Ethereum network using a compatible development framework like Truffle or Hardhat.
-Provide the addresses of the WrappedETH, CompoundETH, and AaveLendingPool contracts as constructor arguments.
-Interact with the contract:
+2. Interact with the contract:
+- As the contract owner, you can call the `deposit` function to deposit funds into the Yield Aggregator.
+- Specify the amount to deposit and the desired Compound Finance and Aave APY parameters.
+- The contract will automatically rebalance the funds between the protocols based on the provided APY parameters.
+- You can also call the `withdraw` function to withdraw funds from the contract.
 
-As the contract owner, you can call the deposit function to deposit funds into the Yield Aggregator.
-Specify the amount to deposit and the desired Compound Finance and Aave APY parameters.
-The contract will automatically rebalance the funds between the protocols based on the provided APY parameters.
-You can also call the withdraw function to withdraw funds from the contract.
-Testing
+## Testing
+
 Testing the smart contract can help ensure its proper functionality. You can write test cases using a testing framework like Truffle or Hardhat and execute the tests against a local or test network.
 
 To run the tests, follow these steps:
 
-Set up a testing environment using Truffle or Hardhat.
+1. Set up a testing environment using Truffle or Hardhat.
 
-Write test cases in Solidity or JavaScript that cover different contract functionalities.
+2. Write test cases in Solidity or JavaScript that cover different contract functionalities.
 
-Run the test suite against the deployed contract to verify its behavior and ensure all functionalities are working as expected.
+3. Run the test suite against the deployed contract to verify its behavior and ensure all functionalities are working as expected.
 
-Development
+## Development
+
 To contribute to the project, you can:
 
-Fork the repository and make changes to the Solidity code.
-Submit a pull request to the main repository for review.
+- Fork the repository and make changes to the Solidity code.
+- Submit a pull request to the main repository for review.
+
 Please follow the project's code style and conventions and provide a detailed explanation of the proposed changes.
 
-License
+## License
+
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code for both commercial and non-commercial purposes.
 
-Disclaimer
+## Disclaimer
+
 The Yield Aggregator contract is provided as-is without any warranty. It is your responsibility to review and understand the code and use it at your own risk.
 
-Feel free to modify this README template to suit your project's specific needs. Include any additional information, instructions, or guidelines that are relevant to your project.
+---
